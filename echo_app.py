@@ -21,10 +21,8 @@ st.title("Echo Word Generator")
 st.write("Echo word formation in Marathi")
 
 base_word = st.text_input("Enter base word (in IPA):").strip().lower()
-keep_diacritics = st.checkbox("Keep diacritics")
 
-if base_word:
-    scan_word = base_word if keep_diacritics else strip_combining(base_word)
+    scan_word = strip_combining(base_word)
 
     i = None
     for idx, ch in enumerate(scan_word):
